@@ -19,26 +19,20 @@ Python で数値を **SI 接頭辞付きで常に 3 桁（整数＋小数 = 3）
 
 ## インストール
 ```bash
-git clone https://github.com/yourname/simple3-formatter.git
-cd simple3-formatter
-pip install .
+uv add git+https://github.com/kaie3/simple3-formatter.git
 ```
 ## 使用例
 ```python
-from simple3_formatter import Simple3Formatter
+from simple3_formatter import Simple3Formatter as sf
 
 # フォーマット
-print(Simple3Formatter.format(1111))        # 1.11K
-print(Simple3Formatter.format(123456789))   # 123M
-print(Simple3Formatter.format(0.00000123))  # 1.23µ
+print(sf.format(1111))        # 1.11K
+print(sf.format(123456789))   # 123M
+print(sf.format(0.00000123))  # 1.23µ
 
 # パース（数値を返す）
 print(Simple3Formatter.parse("1.23K"))      # 1230.0
 
-# パース（アンダースコア区切りの repr を持つ特殊数値型を返す）
-x = Simple3Formatter.parse("1.23K", as_str=True)
-print(x)        # 1230
-print(repr(x))  # 1_230
 ```
 テスト
 ```python
