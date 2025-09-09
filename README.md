@@ -11,7 +11,7 @@ Python で数値を SI 接頭辞付きで「常に 3 桁（整数部＋小数部
 - `parse(..., as_str=True)` は repr がアンダースコア区切りになる内部数値型を返す
 
 対応 Python バージョン
-- Python 3.13 以上
+- Python 3.10 以上
 
 インストール
 

@@ -4,6 +4,7 @@
 `Simple3Formatter` の static メソッドで構成され、モジュールレベルの
 ヘルパー `format` と `parse` は `s3fmt.__init__` から再エクスポートされます。
 """
+
 import math
 from typing import Tuple, Union
 
@@ -96,7 +97,9 @@ class Simple3Formatter:
         return f"{scaled:,.{frac_digits}f}{unit}"
 
     @staticmethod
-    def parse(value_str: str, *, as_str: bool = False) -> Union[float, _UnderscoreInt, _UnderscoreFloat]:
+    def parse(
+        value_str: str, *, as_str: bool = False
+    ) -> Union[float, _UnderscoreInt, _UnderscoreFloat]:
         """SI接尾辞付き文字列を数値に変換します。
         SI単位が必要です。
         as_str=Trueの場合、アンダースコアでグループ化されたrepr形式の内部型を返します。

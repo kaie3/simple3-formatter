@@ -3,7 +3,7 @@ name = "simple3-formatter"
 version = "0.1.0"
 description = "Python で数値を SI 接頭辞付きで常に 3 桁（整数＋小数 = 3） に整形するライブラリです。"
 readme = "README.md"
-requires-python = ">=3.13"
+requires-python = ">=3.10"
 license = { text = "MIT" }
 authors = [ { name = "kaie" } ]
 keywords = ["si", "formatter", "si-prefix", "format"]

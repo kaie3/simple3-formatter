@@ -2,6 +2,7 @@
 
 コア実装を簡潔な公開インターフェースとして再エクスポートします。
 """
+
 from .core import Simple3Formatter
 
 # convenience re-exports
