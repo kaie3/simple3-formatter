@@ -5,7 +5,7 @@ description = "Python で数値を SI 接頭辞付きで常に 3 桁（整数＋
 readme = "README.md"
 requires-python = ">=3.13"
 license = { text = "MIT" }
-authors = [ { name = "kaie", email = "" } ]
+authors = [ { name = "kaie" } ]
 keywords = ["si", "formatter", "si-prefix", "format"]
 classifiers = [
   "Programming Language :: Python :: 3",
