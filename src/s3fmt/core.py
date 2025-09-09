@@ -6,7 +6,7 @@
 """
 
 import math
-from typing import Tuple, Union
+from typing import Tuple, Union, Literal
 
 
 class _UnderscoreInt(int):
@@ -58,10 +58,8 @@ class Simple3Formatter:
         return max(3 - int_digits, 0)
 
     @staticmethod
-    def format(value: float, mode: str = "round") -> str:
+    def format(value: float, mode: Literal["round", "floor", "ceil"] = "round") -> str:
         """値を「3 桁」ルールに従って SI 接頭辞付き文字列に整形する。"""
-        if mode not in ("round", "floor", "ceil"):
-            raise ValueError("mode must be 'round', 'floor', or 'ceil'")
 
         if value == 0:
             return "0.00"
