@@ -2,6 +2,7 @@
 import math
 from typing import Tuple, Union
 
+
 class _UnderscoreInt(int):
     """repr時にアンダースコア区切りで表示される内部用 int"""
 
@@ -52,7 +53,7 @@ class Simple3Formatter:
             return exp3, Simple3Formatter.UNITS_POS[exp3]
         else:
             lower = -(len(Simple3Formatter.UNITS_NEG) - 1)
-            exp3 = max(exp3,lower)
+            exp3 = max(exp3, lower)
             return exp3, Simple3Formatter.UNITS_NEG[-exp3]
 
     @staticmethod
@@ -98,7 +99,7 @@ class Simple3Formatter:
 
         scaled = value / (10 ** (3 * exp3))
         frac_digits = Simple3Formatter._digits_for_three_total(abs(scaled))
-        factor = 10 ** frac_digits
+        factor = 10**frac_digits
 
         if mode == "round":
             scaled = round(scaled, frac_digits)
@@ -122,7 +123,9 @@ class Simple3Formatter:
             return f"{scaled:,.{frac_digits}f}{unit}"
 
     @staticmethod
-    def parse(value_str: str, *, as_str: bool = False) -> Union[float, _UnderscoreInt, _UnderscoreFloat]:
+    def parse(
+        value_str: str, *, as_str: bool = False
+    ) -> Union[float, _UnderscoreInt, _UnderscoreFloat]:
         """SI接頭辞付き文字列を数値に変換する。
 
         Args:
@@ -138,7 +141,7 @@ class Simple3Formatter:
         s = value_str.strip()
         for unit in sorted(Simple3Formatter.UNIT_TO_EXP.keys(), key=len, reverse=True):
             if unit and s.endswith(unit):
-                num_str = s[:-len(unit)].replace(",", "").replace("_", "")
+                num_str = s[: -len(unit)].replace(",", "").replace("_", "")
                 try:
                     num = float(num_str)
                 except ValueError:

@@ -4,10 +4,29 @@ version = "0.1.0"
 description = "Python で数値を SI 接頭辞付きで常に 3 桁（整数＋小数 = 3） に整形するライブラリです。"
 readme = "README.md"
 requires-python = ">=3.13"
+license = { text = "MIT" }
+authors = [ { name = "kaie", email = "" } ]
+keywords = ["si", "formatter", "si-prefix", "format"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+]
+
 dependencies = []
 
-[dependency-groups]
+[project.optional-dependencies]
 dev = [
-    "pytest>=8.4.2",
-    "ruff>=0.12.12",
+  "pytest>=8.4.2",
+  "ruff>=0.12.12",
 ]
+
+[tool.pytest.ini_options]
+minversion = "7.0"
+addopts = "-q"
+testpaths = ["tests"]
+
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
