@@ -1,10 +1,10 @@
 [project]
 name = "simple3-formatter"
 version = "0.1.0"
-description = "Python で数値を SI 接頭辞付きで常に 3 桁（整数＋小数 = 3） に整形するライブラリです。
-また、厳密なパース機能も備えており、repr で アンダースコア区切りを表示する特殊数値型を返すこともできます。"
+description = "Python で数値を SI 接頭辞付きで常に 3 桁（整数＋小数 = 3） に整形するライブラリです。"
 readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
+    "pytest>=8.4.2",
     "ruff>=0.12.12",
 ]
