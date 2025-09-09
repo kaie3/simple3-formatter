@@ -24,7 +24,7 @@ uv add git+https://github.com/kaie3/simple3-formatter.git
 基本的な使用例:
 
 ```python
-from simple3_formatter import Simple3Formatter as sf
+from s3fmt import Simple3Formatter as sf
 
 # 単純なフォーマット
 print(sf.format(1))          # -> '1.00'
@@ -66,7 +66,13 @@ API（概要）
 
 開発
 
-ローカルで pytest を直接使う場合は、仮想環境を有効にして `uv run -m pytest -q` を実行してください。
+推奨インポート名は `s3fmt` です。
+
+ローカルで pytest を実行する場合:
+
+```bash
+uv run --with pytest -m pytest -q
+```
 
 ライセンス
 

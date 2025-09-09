@@ -1,5 +1,5 @@
 import pytest
-from simple3_formatter.simple3_formatter import Simple3Formatter as S3F
+from s3fmt import Simple3Formatter as S3F
 
 # テストデータ定義（可読性向上のため定数化）
 BASICS = [
